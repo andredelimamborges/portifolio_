@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>André Borges - Portfólio Futurista</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<main>
+			<nav>
+				<div class="logo-placeholder">AB</div>
+				<div class="menu-text">
+					<p data-section="home" class="nav-link active">Início</p>
+					<p data-section="skills" class="nav-link">Habilidades</p>
+					<p data-section="projects" class="nav-link">Projetos</p>
+					<p data-section="contact" class="nav-link">Contato</p>
+				</div>
+				<button onclick="window.open('https://www.linkedin.com/in/andré-de-lima-miranda-borges', '_blank')">Meu LinkedIn</button>
+			</nav>
+
+			<div class="section home-section active-section">
+				<div class="home-content">
+					<h2 class="welcome-title">Olá, eu sou <span class="neon-name">André Borges</span>!</h2>
+					<p class="role-text">Software Engineer for AI Training Data Dev Front-End</p>
+					<p class="role-text-2">Coordenador de Sistemas | JavaScript | Cybersegurança | Next.js | UX/UI Design | React</p>
+					<div class="home-summary">
+						<p class="summary-line">Profissional de Tecnologia da Informação em ascensão,</p>
+						<p class="summary-line">com experiência em consultoria de operações e sistemas, além de desenvolvimento front-end.</p>
+						<p class="summary-line">Atualmente, sou Consultor de Operações e Sistemas PL na MS Solutions.</p>
+						<p class="summary-line">Foco na interseção entre desenvolvimento web e experiência do usuário.</p>
+						<p class="location-text">📍 Andradas, Minas Gerais, Brasil.</p>
+					</div>
+					<button class="explore-button" data-target-section="skills">Explorar Portfólio</button>
+				</div>
+			</div>
+
+			<div class="section skills-section">
+				<div class="content">
+					<div class="info-text">
+						<h1 id="main-title">Desenvolvimento Web (Front-end)</h1>
+						<p class="info-description">
+							Experiência na construção de interfaces de usuário dinâmicas e responsivas utilizando HTML, CSS, JavaScript e frameworks modernos como React e Vue.js. Foco na usabilidade e experiência do usuário.
+						</p>
+					</div>
+					<div class="thumbnails">
+						<div class="item-wrapper activePhoto">
+							<img src="./images/tech1.png" alt="Tecnologia Front-end" class="static-item" />
+						</div>
+						<div class="item-wrapper">
+							<img src="./images/tech2.png" alt="Tecnologia Back-end" class="static-item" />
+						</div>
+						<div class="item-wrapper">
+							<img src="./images/tech3.png" alt="Tecnologia Cloud" class="static-item" />
+						</div>
+						<div class="item-wrapper">
+							<img src="./images/tech4.png" alt="Tecnologia Gestão de Projetos" class="static-item" />
+						</div>
+					</div>
+				</div>
+				<div class="main-wheel">
+					<img src="./images/tech1_large.png" alt="Tecnologia Front-end Grande" class="dynamic-item-1" />
+					<img src="./images/tech2_large.png" alt="Tecnologia Back-end Grande" class="dynamic-item-2" />
+					<img src="./images/tech3_large.png" alt="Tecnologia Cloud Grande" class="dynamic-item-3" />
+					<img src="./images/tech4_large.png" alt="Tecnologia Gestão de Projetos Grande" class="dynamic-item-4" />
+				</div>
+				<div class="background-wheel">
+					<img src="./images/bg_element1.png" alt="Elemento Fundo 1" class="dynamic-bg-1" />
+					<img src="./images/bg_element2.png" alt="Elemento Fundo 2" class="dynamic-bg-2" />
+					<img src="./images/bg_element3.png" alt="Elemento Fundo 3" class="dynamic-bg-3" />
+					<img src="./images/bg_element4.png" alt="Elemento Fundo 4" class="dynamic-bg-4" />
+				</div>
+			</div>
+
+			<div class="section projects-section">
+				<div class="projects-content">
+					<h2 class="section-title">Meus Projetos</h2>
+					<p class="section-subtitle">Uma amostra do meu trabalho e paixão por construir.</p>
+					<div class="project-grid">
+						<div class="project-card" data-project-id="1">
+							<img src="images\redeprivada.png" alt="Projeto 1 Thumbnail" class="project-thumbnail">
+							<h3 class="project-card-title">Site de Tecnologia (Atual)</h3>
+							<div class="project-details">
+								<p>Atualmente envolvido no desenvolvimento de um site de tecnologia, aplicando práticas modernas de front-end para criar interfaces responsivas e intuitivas.</p>
+								<p>Tecnologias: Next.js, React, JavaScript, HTML, CSS.</p>
+								<div class="project-links">
+									<a href="https://github.com/andredelimamborges" target="_blank" class="project-link">Ver GitHub</a>
+									<a href="https://www.areadoclientems.com.br" target="_blank" class="project-link">Ver Demo</a>
+								</div>
+							</div>
+						</div>
+						<div class="project-card" data-project-id="2">
+							<img src="images\redeprivada.png" alt="Projeto 2 Thumbnail" class="project-thumbnail">
+							<h3 class="project-card-title">Consultoria de Operações MS Solutions</h3>
+							<div class="project-details">
+								<p>Gestão de integrações com parceiros e fornecedores, aprimorando a experiência dos usuários da plataforma. Autonomia para tomar decisões técnicas e garantir a qualidade do sistema.</p>
+								<p>Tecnologias: Sistemas de Gestão, Análise de Dados, Automação.</p>
+								<div class="project-links">
+									<a href="https://www.linkedin.com/in/andré-de-lima-miranda-borges" target="_blank" class="project-link">Saber Mais (LinkedIn)</a>
+								</div>
+							</div>
+						</div>
+						<div class="project-card" data-project-id="3">
+							<img src="images\redeprivada.png" alt="Projeto 3 Thumbnail" class="project-thumbnail">
+							<h3 class="project-card-title">Engenharia de Prompts para IA Generativa</h3>
+							<div class="project-details">
+								<p>Especializado em engenharia de prompts para sistemas de inteligência artificial generativa, atuando na criação e refinamento de instruções para otimizar o desempenho de modelos como o ChatGPT.</p>
+								<p>Tecnologias: IA Prompting, ChatGPT, AWS com Claude.</p>
+								<div class="project-links">
+									<a href="https://www.linkedin.com/in/andré-de-lima-miranda-borges" target="_blank" class="project-link">Saber Mais (LinkedIn)</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section contact-section">
+				<div class="contact-content">
+					<h2 class="section-title">Vamos Conectar!</h2>
+					<p class="section-subtitle">Entre em contato para oportunidades ou bate-papo sobre tecnologia.</p>
+					<div class="contact-grid">
+						<div class="contact-node">
+							<img src="./images/linkedin_icon.png" alt="LinkedIn" class="contact-icon">
+							<p class="node-label">LinkedIn</p>
+							<a href="https://www.linkedin.com/in/andré-de-lima-miranda-borges" target="_blank" class="node-link">/andré-de-lima-miranda-borges</a>
+						</div>
+						<div class="contact-node">
+							<img src="./images/whatsapp_icon.png" alt="WhatsApp" class="contact-icon">
+							<p class="node-label">WhatsApp</p>
+							<a href="https://wa.me/5535998816777" target="_blank" class="node-link">+55 35 99881-6777</a>
+						</div>
+						<div class="contact-node">
+							<img src="./images/email_icon.png" alt="Email" class="contact-icon">
+							<p class="node-label">Email</p>
+							<a href="mailto:andre.borges@sou.unifeob.edu.br" class="node-link">andre.borges@sou.unifeob.edu.br</a>
+						</div>
+						<div class="contact-node">
+							<img src="./images/github_icon.png" alt="GitHub" class="contact-icon">
+							<p class="node-label">GitHub</p>
+							<a href="https://github.com/SeuUsuarioGitHub" target="_blank" class="node-link">Meu GitHub</a>
+						</div>
+					</div>
+					<div class="contact-form">
+						<h3>Envie uma Mensagem Rápida</h3>
+						<input type="text" placeholder="Seu Nome" class="form-input">
+						<input type="email" placeholder="Seu Email" class="form-input">
+						<textarea placeholder="Sua Mensagem" class="form-textarea"></textarea>
+						<button class="submit-button">Enviar</button>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

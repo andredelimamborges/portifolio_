@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  background-color: #0f0f1c;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.modern-navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 30px;
+  background: #080c12;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+  color: #00d4ff;
+  cursor: pointer;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #00d4ff, #a66cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.filter-btn {
+  background-color: transparent;
+  color: #00d4ff;
+  border: 1.5px solid #00d4ff;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-btn:hover {
+  background-color: rgba(0, 212, 255, 0.1);
+}
+
+.filter-btn.active {
+  background-color: #00d4ff;
+  color: #000;
+  font-weight: 600;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+.event-card {
+  background-color: #1e1e2f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(114, 9, 183, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(114, 9, 183, 0.6);
+}
+
+.event-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.event-card h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+}
+
+.event-card p {
+  margin: 3px 0;
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.price {
+  color: #00ff95;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.reserve-btn {
+  margin-top: 12px;
+  background: linear-gradient(to right, #00ff95, #00c9ff);
+  color: #0f0f1c;
+  border: none;
+  padding: 10px;
+  width: 90%;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.reserve-btn:hover {
+  background: linear-gradient(to right, #00c9ff, #00ff95);
+}
+
+.reserve-btn.reserved {
+  background: linear-gradient(to right, #ffb703, #fb8500);
+  color: #1e1e2f;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #aaa;
+  padding: 5px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.icon-btn:hover {
+  color: #00d4ff;
+  transform: scale(1.1);
+}
+
+.icon-btn.active i {
+  color: #00ff95;
+}
+
+.icon-btn.like-btn.active i {
+  color: #ff2e63;
+}

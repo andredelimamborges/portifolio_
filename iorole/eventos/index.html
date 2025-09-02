@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos Sociais</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header class="modern-navbar">
+    <div class="navbar-left">
+      <span class="menu-icon">☰</span>
+      <h1><span class="gradient-text">Eventos Sociais</span></h1>
+    </div>
+    <div class="filters">
+      <button class="filter-btn active" data-category="todos"><i data-lucide="star"></i> Todos</button>
+      <button class="filter-btn" data-category="happy-hour"><i data-lucide="clock"></i> Happy Hour</button>
+      <button class="filter-btn" data-category="festas"><i data-lucide="users"></i> Festas</button>
+      <button class="filter-btn" data-category="networking"><i data-lucide="user"></i> Networking</button>
+      <button class="filter-btn" data-category="musica"><i data-lucide="music"></i> Música</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="event-grid" id="eventGrid">
+
+      <div class="event-card" data-category="happy-hour">
+        <img src="https://source.unsplash.com/400x250/?bar,party" alt="Happy Hour">
+        <div class="card-actions">
+          <button class="icon-btn like-btn" title="Curtir"><i data-lucide="heart"></i></button>
+          <button class="icon-btn save-btn" title="Salvar"><i data-lucide="bookmark"></i></button>
+          <button class="icon-btn share-btn" title="Compartilhar"><i data-lucide="share-2"></i></button>
+        </div>
+        <p class="price">R$ 25</p>
+        <h3>Happy Hour Neon Night</h3>
+        <p>São Paulo, SP</p>
+        <p>28/06/2025 - 19:00</p>
+        <p class="interest-count">127 interessados</p>
+        <p>Bebidas especiais com desconto e música eletrônica</p>
+        <button class="reserve-btn">Reservar</button>
+      </div>
+
+      <div class="event-card" data-category="festas">
+        <img src="https://source.unsplash.com/400x250/?cyberpunk,party" alt="Festa Cyberpunk">
+        <div class="card-actions">
+          <button class="icon-btn like-btn" title="Curtir"><i data-lucide="heart"></i></button>
+          <button class="icon-btn save-btn" title="Salvar"><i data-lucide="bookmark"></i></button>
+          <button class="icon-btn share-btn" title="Compartilhar"><i data-lucide="share-2"></i></button>
+        </div>
+        <p class="price">R$ 60</p>
+        <h3>Festa Cyberpunk 2025</h3>
+        <p>Rio de Janeiro, RJ</p>
+        <p>29/06/2025 - 22:00</p>
+        <p class="interest-count">88 interessados</p>
+        <p>Festa temática com DJs internacionais e efeitos especiais</p>
+        <button class="reserve-btn">Reservar</button>
+      </div>
+
+      <div class="event-card" data-category="networking">
+        <img src="https://source.unsplash.com/400x250/?tech,conference" alt="Tech Meetup">
+        <div class="card-actions">
+          <button class="icon-btn like-btn" title="Curtir"><i data-lucide="heart"></i></button>
+          <button class="icon-btn save-btn" title="Salvar"><i data-lucide="bookmark"></i></button>
+          <button class="icon-btn share-btn" title="Compartilhar"><i data-lucide="share-2"></i></button>
+        </div>
+        <p class="price">Gratuito</p>
+        <h3>Meetup Tech Developers</h3>
+        <p>Belo Horizonte, MG</p>
+        <p>30/06/2025 - 14:00</p>
+        <p class="interest-count">234 interessados</p>
+        <p>Networking para desenvolvedores e apresentações sobre IA</p>
+        <button class="reserve-btn">Reservar</button>
+      </div>
+
+      <div class="event-card" data-category="happy-hour">
+        <img src="https://source.unsplash.com/400x250/?live,music,concert" alt="Live Music">
+        <div class="card-actions">
+          <button class="icon-btn like-btn" title="Curtir"><i data-lucide="heart"></i></button>
+          <button class="icon-btn save-btn" title="Salvar"><i data-lucide="bookmark"></i></button>
+          <button class="icon-btn share-btn" title="Compartilhar"><i data-lucide="share-2"></i></button>
+        </div>
+        <p class="price">R$ 40</p>
+        <h3>Live Music & Cocktails</h3>
+        <p>São Paulo, SP</p>
+        <p>28/06/2025 - 20:00</p>
+        <p class="interest-count">150 interessados</p>
+        <p>Música ao vivo e coquetéis especiais</p>
+        <button class="reserve-btn">Reservar</button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

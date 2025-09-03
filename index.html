@@ -1,229 +1,1044 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>André Borges - Portfólio Futurista</title>
-		<link rel="stylesheet" href="style.css" />
-		<script src="script.js" defer></script>
-	</head>
-	<body>
-		<main>
-			<nav>
-				<div class="logo-placeholder">AB</div>
-				<div class="menu-text">
-					<p data-section="home" class="nav-link active">Início</p>
-					<p data-section="skills" class="nav-link">Habilidades</p>
-					<p data-section="projects" class="nav-link">Projetos</p>
-					<p data-section="contact" class="nav-link">Contato</p>
-				</div>
-				<button onclick="window.open('https://www.linkedin.com/in/andré-de-lima-miranda-borges', '_blank')">Meu LinkedIn</button>
-			</nav>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio - André Borges</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <style>
+    /* Variáveis CSS */
+    :root {
+      --nav-height: 70px;
+      --main-color: #00ffff;
+      --secondary-color: #8200ff;
+      --bg-dark: #0d0d1a;
+      --bg-medium: #1a1a3a;
+      --text-light: #e0e0ff;
+      --text-muted: #b0b0d0;
+    }
 
-			<div class="section home-section active-section">
-				<div class="home-content">
-					<h2 class="welcome-title">Olá, eu sou <span class="neon-name">André Borges</span>!</h2>
-					<p class="role-text">Software Engineer for AI Training Data Dev Front-End</p>
-					<p class="role-text-2">Coordenador de Sistemas | JavaScript | Cybersegurança | Next.js | UX/UI Design | React</p>
-					<div class="home-summary">
-						<p class="summary-line">Profissional de Tecnologia da Informação em ascensão,</p>
-						<p class="summary-line">com experiência em consultoria de operações e sistemas, além de desenvolvimento front-end.</p>
-						<p class="summary-line">Atualmente, sou Consultor de Operações e Sistemas PL na MS Solutions.</p>
-						<p class="summary-line">Foco na interseção entre desenvolvimento web e experiência do usuário.</p>
-						<p class="location-text">📍 Andradas, Minas Gerais, Brasil.</p>
-					</div>
-					<button class="explore-button" data-target-section="skills">Explorar Portfólio</button>
-				</div>
-			</div>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-			<div class="section skills-section">
-				<div class="content">
-					<div class="info-text">
-						<h1 id="main-title">Desenvolvimento Web (Front-end)</h1>
-						<p class="info-description">
-							Experiência na construção de interfaces de usuário dinâmicas e responsivas utilizando HTML, CSS, JavaScript e frameworks modernos como React e Vue.js. Foco na usabilidade e experiência do usuário.
-						</p>
-					</div>
-<<<<<<< HEAD
-					<div class="thumbnails"> 
-=======
-					<div class="thumbnails">
->>>>>>> a14500ad2fd37d08d64c84c5ecc2ff566483b28e
-						<div class="item-wrapper activePhoto">
-							<img src="./images/tech1.png" alt="Tecnologia Front-end" class="static-item" />
-						</div>
-						<div class="item-wrapper">
-							<img src="./images/tech2.png" alt="Tecnologia Back-end" class="static-item" />
-						</div>
-						<div class="item-wrapper">
-							<img src="./images/tech3.png" alt="Tecnologia Cloud" class="static-item" />
-						</div>
-						<div class="item-wrapper">
-							<img src="./images/tech4.png" alt="Tecnologia Gestão de Projetos" class="static-item" />
-						</div>
-					</div>
-				</div>
-				<div class="main-wheel">
-					<img src="./images/tech1_large.png" alt="Tecnologia Front-end Grande" class="dynamic-item-1" />
-					<img src="./images/tech2_large.png" alt="Tecnologia Back-end Grande" class="dynamic-item-2" />
-					<img src="./images/tech3_large.png" alt="Tecnologia Cloud Grande" class="dynamic-item-3" />
-					<img src="./images/tech4_large.png" alt="Tecnologia Gestão de Projetos Grande" class="dynamic-item-4" />
-				</div>
-				<div class="background-wheel">
-					<img src="./images/bg_element1.png" alt="Elemento Fundo 1" class="dynamic-bg-1" />
-					<img src="./images/bg_element2.png" alt="Elemento Fundo 2" class="dynamic-bg-2" />
-					<img src="./images/bg_element3.png" alt="Elemento Fundo 3" class="dynamic-bg-3" />
-					<img src="./images/bg_element4.png" alt="Elemento Fundo 4" class="dynamic-bg-4" />
-				</div>
-			</div>
+    body {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      overflow-x: hidden;
+      padding: 20px;
+    }
 
-			<div class="section projects-section">
-				<div class="projects-content">
-					<h2 class="section-title">Meus Projetos</h2>
-					<p class="section-subtitle">Uma amostra do meu trabalho e paixão por construir.</p>
-					<div class="project-grid">
-						<div class="project-card" data-project-id="1">
-							<img src="images\redeprivada.png" alt="Projeto 1 Thumbnail" class="project-thumbnail">
-							<h3 class="project-card-title">Site de Tecnologia (Atual)</h3>
-							<div class="project-details">
-								<p>Atualmente envolvido no desenvolvimento de um site de tecnologia, aplicando práticas modernas de front-end para criar interfaces responsivas e intuitivas.</p>
-								<p>Tecnologias: Next.js, React, JavaScript, HTML, CSS.</p>
-								<div class="project-links">
-									<a href="https://github.com/andredelimamborges" target="_blank" class="project-link">Ver GitHub</a>
-									<a href="https://www.areadoclientems.com.br" target="_blank" class="project-link">Ver Demo</a>
-								</div>
-							</div>
-						</div>
-						<div class="project-card" data-project-id="2">
-							<img src="images\redeprivada.png" alt="Projeto 2 Thumbnail" class="project-thumbnail">
-							<h3 class="project-card-title">Consultoria de Operações MS Solutions</h3>
-							<div class="project-details">
-								<p>Gestão de integrações com parceiros e fornecedores, aprimorando a experiência dos usuários da plataforma. Autonomia para tomar decisões técnicas e garantir a qualidade do sistema.</p>
-<<<<<<< HEAD
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-=======
->>>>>>> a14500ad2fd37d08d64c84c5ecc2ff566483b28e
-								<p>Tecnologias: Sistemas de Gestão, Análise de Dados, Automação.</p>
-								<div class="project-links">
-									<a href="https://www.linkedin.com/in/andré-de-lima-miranda-borges" target="_blank" class="project-link">Saber Mais (LinkedIn)</a>
-								</div>
-							</div>
-						</div>
-						<div class="project-card" data-project-id="3">
-							<img src="images\redeprivada.png" alt="Projeto 3 Thumbnail" class="project-thumbnail">
-							<h3 class="project-card-title">Engenharia de Prompts para IA Generativa</h3>
-							<div class="project-details">
-								<p>Especializado em engenharia de prompts para sistemas de inteligência artificial generativa, atuando na criação e refinamento de instruções para otimizar o desempenho de modelos como o ChatGPT.</p>
-								<p>Tecnologias: IA Prompting, ChatGPT, AWS com Claude.</p>
-								<div class="project-links">
-									<a href="https://www.linkedin.com/in/andré-de-lima-miranda-borges" target="_blank" class="project-link">Saber Mais (LinkedIn)</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+    main {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 1200px;
+      min-height: 90vh;
+      border-radius: 25px;
+      overflow: hidden;
+      background: linear-gradient(90deg, rgba(20,20,40,1) 0%, rgba(30,30,60,1) 35%, rgba(40,40,80,1) 100%);
+      box-shadow: 0 0 50px rgba(0,255,255,0.18);
+      border: 1px solid rgba(0,255,255,0.06);
+    }
 
-			<div class="section contact-section">
-				<div class="contact-content">
-					<h2 class="section-title">Vamos Conectar!</h2>
-					<p class="section-subtitle">Entre em contato para oportunidades ou bate-papo sobre tecnologia.</p>
-					<div class="contact-grid">
-						<div class="contact-node">
-<<<<<<< HEAD
-							<img src="./images/linkedin_icon.png" alt="LinkedIn" class="contact-icon">
-=======
->>>>>>> a14500ad2fd37d08d64c84c5ecc2ff566483b28e
-							<p class="node-label">LinkedIn</p>
-							<a href="https://www.linkedin.com/in/andré-de-lima-miranda-borges" target="_blank" class="node-link">/andré-de-lima-miranda-borges</a>
-						</div>
-						<div class="contact-node">
-<<<<<<< HEAD
-							<img src="./images/whatsapp_icon.png" alt="WhatsApp" class="contact-icon">
-=======
->>>>>>> a14500ad2fd37d08d64c84c5ecc2ff566483b28e
-							<p class="node-label">WhatsApp</p>
-							<a href="https://wa.me/5535998816777" target="_blank" class="node-link">+55 35 99881-6777</a>
-						</div>
-						<div class="contact-node">
-<<<<<<< HEAD
-							<img src="./images/email_icon.png" alt="Email" class="contact-icon">
-=======
->>>>>>> a14500ad2fd37d08d64c84c5ecc2ff566483b28e
-							<p class="node-label">Email</p>
-							<a href="mailto:andre.borges@sou.unifeob.edu.br" class="node-link">andre.borges@sou.unifeob.edu.br</a>
-						</div>
-						<div class="contact-node">
-<<<<<<< HEAD
-							<img src="./images/github_icon.png" alt="GitHub" class="contact-icon">
-							<p class="node-label">GitHub</p>
-							<a href="https://github.com/SeuUsuarioGitHub" target="_blank" class="node-link">Meu GitHub</a>
-=======
-							<p class="node-label">GitHub</p>
-							<a href="https://github.com/andredelimamborges" target="_blank" class="node-link">Meu GitHub</a>
->>>>>>> a14500ad2fd37d08d64c84c5ecc2ff566483b28e
-						</div>
-					</div>
-					<div class="contact-form">
-						<h3>Envie uma Mensagem Rápida</h3>
-						<input type="text" placeholder="Seu Nome" class="form-input">
-						<input type="email" placeholder="Seu Email" class="form-input">
-						<textarea placeholder="Sua Mensagem" class="form-textarea"></textarea>
-						<button class="submit-button">Enviar</button>
-					</div>
-				</div>
-			</div>
-		</main>
-	</body>
-<<<<<<< HEAD
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 20px;
+      align-items: center;
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(0, 255, 255, 0.08);
+      flex-wrap: wrap;
+    }
+
+    .logo-placeholder {
+      width: 40px;
+      height: 40px;
+      background-color: var(--main-color);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 20px;
+      color: var(--bg-medium);
+      box-shadow: 0 0 15px var(--main-color);
+    }
+
+    .menu-text {
+      display: flex;
+      gap: 15px;
+      font-weight: 500;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 5px 0;
+    }
+
+    .menu-text p {
+      cursor: pointer;
+      transition: color 0.3s, text-shadow 0.3s;
+      position: relative;
+      font-size: 0.9em;
+    }
+
+    .menu-text p:hover {
+      color: var(--main-color);
+      text-shadow: 0 0 8px var(--main-color);
+    }
+
+    .menu-text p.active {
+      color: var(--main-color);
+      text-shadow: 0 0 8px var(--main-color);
+    }
+    .menu-text p.active::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--main-color);
+      box-shadow: 0 0 8px var(--main-color);
+    }
+
+    button {
+      font-size: 0.9em;
+      padding: 10px 25px;
+      border-radius: 20px;
+      background-color: transparent;
+      border: 2px solid var(--main-color);
+      color: var(--main-color);
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    button:hover {
+      background-color: var(--main-color);
+      color: var(--bg-medium);
+      box-shadow: 0 0 20px var(--main-color);
+    }
+
+    /* Base para todas as seções */
+    .section {
+      width: 100%;
+      height: calc(100% - var(--nav-height, 70px));
+      position: absolute;
+      top: var(--nav-height, 70px);
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      overflow-y: auto;
+      flex-direction: column;
+    }
+
+    .section.active-section {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+
+    /* Home */
+    .home-section { 
+      padding: 20px; 
+      text-align: center; 
+      justify-content: center; 
+      background: linear-gradient(135deg, rgba(20,20,40,0.9) 0%, rgba(40,40,80,0.9) 100%);
+    }
+    
+    .home-content { 
+      max-width: 700px; 
+      margin-bottom: 50px; 
+      padding: 0 20px; 
+    }
+
+    .welcome-title { 
+      font-size: 2.8em; 
+      color: #fff; 
+      text-shadow: 0 0 15px rgba(0,255,255,0.7); 
+      margin-bottom: 10px; 
+      letter-spacing: 1px; 
+      animation: fadeInScale 1.5s forwards; 
+    }
+    
+    .welcome-title .neon-name { 
+      color: var(--main-color); 
+      text-shadow: 0 0 10px var(--main-color), 0 0 20px var(--main-color), 0 0 30px var(--main-color); 
+    }
+
+    .role-text { 
+      font-size: 1.3em; 
+      color: #b0e0e6; 
+      margin-bottom: 5px; 
+      opacity: 0; 
+      animation: fadeIn 1.2s 0.5s forwards; 
+    }
+    
+    .role-text-2 { 
+      font-size: 1em; 
+      color: #80c0c6; 
+      margin-bottom: 30px; 
+      opacity: 0; 
+      animation: fadeIn 1.2s 0.8s forwards; 
+    }
+
+    .home-summary { 
+      margin-top: 30px; 
+      text-align: left; 
+      font-size: 0.95em; 
+      color: #c0c0e0; 
+      line-height: 1.8; 
+    }
+    
+    .summary-line { 
+      opacity: 0; 
+      animation: fadeIn 1.2s forwards; 
+      margin-bottom: 10px;
+      padding-left: 10px;
+      border-left: 2px solid var(--main-color);
+    }
+    
+    .summary-line:nth-child(1){ animation-delay: 1.2s; }
+    .summary-line:nth-child(2){ animation-delay: 1.5s; }
+    .summary-line:nth-child(3){ animation-delay: 1.8s; }
+    .summary-line:nth-child(4){ animation-delay: 2.1s; }
+
+    .location-text { 
+      font-size: 1em; 
+      color: #90a0a0; 
+      margin-top: 20px; 
+      opacity: 0; 
+      animation: fadeIn 1.2s 2.4s forwards; 
+    }
+
+    .explore-button {
+      margin-top: 50px; 
+      padding: 12px 30px; 
+      font-size: 1em; 
+      border-radius: 30px;
+      background-color: var(--main-color); 
+      color: var(--bg-medium); 
+      border: none; 
+      box-shadow: 0 0 25px rgba(0,255,255,0.7);
+      cursor: pointer; 
+      transition: transform 0.3s, box-shadow 0.3s; 
+      opacity: 0; 
+      animation: fadeInScale 1.2s 2.8s forwards;
+    }
+    
+    .explore-button:hover { 
+      transform: translateY(-3px) scale(1.02); 
+      box-shadow: 0 0 35px rgba(0,255,255,0.9); 
+    }
+
+    /* Habilidades - estrutura principal */
+    .skills-section {
+      position: relative;
+      overflow: hidden;
+      padding: 20px;
+      background: linear-gradient(135deg, rgba(30,30,60,0.9) 0%, rgba(50,50,100,0.9) 100%);
+    }
+
+    .skills-section .content { 
+      display: flex; 
+      flex-direction: column; 
+      width: 90%; 
+      gap: 40px; 
+      margin: 20px auto; 
+      align-items: center; 
+      padding: 0; 
+      position: relative; 
+      z-index: 5; 
+      max-width: 1000px; 
+    }
+    
+    .skills-section .info-text { 
+      z-index: 5; 
+      padding: 0 20px; 
+      text-align: center;
+      max-width: 800px;
+    }
+    
+    .skills-section h1 { 
+      text-align: center; 
+      color: var(--main-color); 
+      text-shadow: 0 0 10px var(--main-color), 0 0 20px var(--main-color); 
+      font-size: 2.5em; 
+      letter-spacing: 1px; 
+      margin-bottom: 20px;
+    }
+    
+    .skills-section .info-description { 
+      text-align: center; 
+      margin-top: 20px; 
+      color: #c0c0e0; 
+      line-height: 1.6; 
+      max-width: 100%; 
+      margin-left: auto; 
+      margin-right: auto; 
+      font-size: 1.1em; 
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      width: 100%;
+      max-width: 1000px;
+      margin-top: 30px;
+    }
+
+    .skill-card {
+      background: rgba(30, 30, 60, 0.7);
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid rgba(0, 255, 255, 0.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+      border-color: rgba(0, 255, 255, 0.3);
+    }
+
+    .skill-icon {
+      font-size: 2.5rem;
+      color: var(--main-color);
+      margin-bottom: 15px;
+      filter: drop-shadow(0 0 8px var(--main-color));
+    }
+
+    .skill-title {
+      font-size: 1.3em;
+      color: var(--main-color);
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .skill-description {
+      color: var(--text-muted);
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+
+    /* projetos */
+    .projects-section { 
+      padding: 20px; 
+      background: linear-gradient(135deg, rgba(20,20,50,0.9) 0%, rgba(40,40,80,0.9) 100%); 
+    }
+    
+    .projects-content { 
+      width: 100%; 
+      max-width: 1200px; 
+      text-align: center; 
+    }
+    
+    .section-title { 
+      font-size: 2.5em; 
+      color: var(--main-color); 
+      text-shadow: 0 0 10px var(--main-color); 
+      margin-bottom: 10px; 
+    }
+    
+    .section-subtitle { 
+      font-size: 1.1em; 
+      color: var(--text-muted); 
+      margin-bottom: 40px; 
+    }
+    
+    .project-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 30px; 
+      justify-content: center; 
+      align-items: stretch; 
+      max-width: 1200px; 
+      margin: 0 auto; 
+    }
+    
+    .project-card { 
+      background-color: rgba(30,30,60,0.8); 
+      border-radius: 15px; 
+      overflow: hidden; 
+      box-shadow: 0 0 20px rgba(0,255,255,0.12); 
+      border: 1px solid rgba(0,255,255,0.06); 
+      transition: transform 0.3s, box-shadow 0.3s; 
+      cursor: pointer; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      padding-bottom: 20px; 
+    }
+    
+    .project-card:hover { 
+      transform: translateY(-5px) scale(1.02); 
+      box-shadow: 0 0 30px rgba(0,255,255,0.25); 
+    }
+    
+    .project-thumbnail { 
+      width: 100%; 
+      height: 180px; 
+      object-fit: cover; 
+      border-bottom: 1px solid rgba(0,255,255,0.06); 
+       
+         background: url('/images/WhatsApp\ Image\ 2025-09-01\ at\ 2.14.29\ PM.jpeg');
+         background-size: cover;
+         background-position: center;
+    
+      
+    }
+    
+    .project-card-title { 
+      font-size: 1.3em; 
+      color: var(--main-color); 
+      margin: 20px 10px 15px; 
+      text-align: center; 
+    }
+    
+    .project-details { 
+      padding: 0 20px; 
+      font-size: 0.95em; 
+      color: var(--text-muted); 
+      text-align: center; 
+      flex-grow: 1; 
+      margin-bottom: 20px;
+    }
+    
+    .project-links { 
+      margin-top: auto; 
+      display: flex; 
+      gap: 15px; 
+      justify-content: center; 
+    }
+    
+    .project-link { 
+      display: inline-block; 
+      padding: 8px 20px; 
+      background-color: rgba(0,255,255,0.12); 
+      border: 1px solid var(--main-color); 
+      border-radius: 8px; 
+      color: var(--main-color); 
+      text-decoration: none; 
+      font-size: 0.9em; 
+      transition: background-color 0.3s, color 0.3s; 
+    }
+    
+    .project-link:hover { 
+      background-color: var(--main-color); 
+      color: var(--bg-medium); 
+    }
+
+    /* contato */
+    .contact-section { 
+      padding: 20px; 
+      background: linear-gradient(135deg, rgba(15,15,40,0.9) 0%, rgba(35,35,70,0.9) 100%); 
+    }
+    
+    .contact-content { 
+      width: 100%; 
+      max-width: 1000px; 
+      text-align: center; 
+    }
+    
+    .contact-grid { 
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      justify-content: center; 
+      align-items: center; 
+      gap: 25px; 
+      margin-top: 40px; 
+      margin-bottom: 40px; 
+      max-width: 1000px; 
+      margin-left: auto; 
+      margin-right: auto; 
+    }
+    
+    .contact-node { 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      background-color: rgba(30,30,70,0.7); 
+      border-radius: 15px; 
+      padding: 25px 20px; 
+      box-shadow: 0 0 20px rgba(130,0,255,0.18); 
+      border: 1px solid rgba(130,0,255,0.08); 
+      transition: transform 0.3s, box-shadow 0.3s; 
+      cursor: pointer; 
+    }
+    
+    .contact-node:hover { 
+      transform: translateY(-8px) scale(1.03); 
+      box-shadow: 0 0 30px rgba(130,0,255,0.28); 
+    }
+    
+    .contact-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: var(--main-color);
+      filter: drop-shadow(0 0 10px rgba(0,255,255,0.6));
+    }
+
+    .node-label { 
+      font-size: 1.1em; 
+      color: #e0b0ff; 
+      margin-bottom: 10px; 
+      font-weight: bold; 
+    }
+    
+    .node-link, .node-info { 
+      font-size: 0.9em; 
+      color: #b0a0ff; 
+      text-decoration: none; 
+      word-break: break-all; 
+      text-align: center; 
+      transition: color 0.3s; 
+    }
+    
+    .node-link:hover { 
+      color: #fff; 
+      text-decoration: underline; 
+    }
+
+    /* formulário */
+    .contact-form { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 20px; 
+      width: 100%; 
+      max-width: 500px; 
+      margin: 40px auto; 
+      padding: 25px; 
+      background-color: rgba(30,30,70,0.5); 
+      border-radius: 15px; 
+      box-shadow: 0 0 15px rgba(0,255,255,0.06); 
+      border: 1px solid rgba(0,255,255,0.03); 
+    }
+    
+    .contact-form h3 { 
+      font-size: 1.5em; 
+      color: var(--main-color); 
+      margin-bottom: 20px; 
+      text-shadow: 0 0 5px var(--main-color); 
+    }
+    
+    .form-input, .form-textarea { 
+      padding: 12px 15px; 
+      border: 1px solid var(--main-color); 
+      background-color: rgba(0,0,0,0.3); 
+      color: var(--text-light); 
+      border-radius: 8px; 
+      font-size: 1em; 
+      transition: border-color 0.3s, box-shadow 0.3s; 
+    }
+    
+    .form-input:focus, .form-textarea:focus { 
+      outline: none; 
+      border-color: var(--main-color); 
+      box-shadow: 0 0 10px var(--main-color); 
+    }
+    
+    .form-textarea { 
+      resize: vertical; 
+      min-height: 120px; 
+    }
+    
+    .submit-button { 
+      margin-top: 10px; 
+      width: 100%; 
+      padding: 12px; 
+      font-size: 1.1em; 
+      background-color: var(--main-color); 
+      color: var(--bg-medium); 
+      border: none; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      transition: background-color 0.3s, box-shadow 0.3s; 
+    }
+    
+    .submit-button:hover { 
+      background-color: #00e0e0; 
+      box-shadow: 0 0 20px var(--main-color); 
+    }
+
+    /* Mensagens de status */
+    .form-status {
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 15px;
+      text-align: center;
+      display: none;
+    }
+    
+    .form-status.success {
+      background-color: rgba(0, 200, 83, 0.2);
+      border: 1px solid #00c853;
+      color: #00c853;
+      display: block;
+    }
+    
+    .form-status.error {
+      background-color: rgba(255, 0, 0, 0.2);
+      border: 1px solid #f44336;
+      color: #f44336;
+      display: block;
+    }
+
+    /* keyframes */
+    @keyframes fadeInScale { 
+      0% { 
+        opacity: 0; 
+        transform: scale(0.9);
+      } 
+      100% { 
+        opacity: 1; 
+        transform: scale(1);
+      } 
+    }
+    
+    @keyframes fadeIn { 
+      0% { 
+        opacity: 0;
+      } 
+      100% { 
+        opacity: 1;
+      } 
+    }
+
+    /* animações iniciais */
+    .project-card, .contact-node, .form-input, .form-textarea, .submit-button, .skill-card { 
+      opacity: 0; 
+      animation: fadeIn 0.8s forwards; 
+    }
+
+    /* ========================= MEDIA QUERIES (RESPONSIVIDADE) ========================= */
+
+    @media (min-width: 600px) {
+      :root { --nav-height: 80px; }
+
+      nav { padding: 20px 30px; }
+      .logo-placeholder { width: 45px; height: 45px; font-size: 22px; }
+      .menu-text { gap: 30px; font-size: 1em; margin: 0; }
+      button { padding: 10px 30px; font-size: 1em; }
+
+      .section { padding-top: var(--nav-height); }
+
+      .welcome-title { font-size: 3.2em; }
+      .role-text { font-size: 1.4em; }
+      .role-text-2 { font-size: 1.1em; }
+      .home-summary { font-size: 1.05em; }
+      .explore-button { font-size: 1.1em; padding: 14px 35px; }
+
+      .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+    }
+
+    @media (min-width: 992px) {
+      :root { --nav-height: 90px; }
+
+      main { 
+        width: 100%; 
+        max-width: 1200px; 
+        height: auto; 
+        min-height: 100vh; 
+        border-radius: 25px; 
+        box-shadow: 0 0 50px rgba(0,255,255,0.18); 
+        border: 1px solid rgba(0,255,255,0.06); 
+        margin: 40px 0;
+      }
+      
+      nav { padding: 25px 40px; }
+      .logo-placeholder { width: 50px; height: 50px; font-size: 24px; }
+      .menu-text { gap: 60px; font-size: 1em; }
+
+      .section { 
+        padding-top: 0; 
+        height: 100%; 
+        top: 0; 
+      }
+
+      .welcome-title { font-size: 3.8em; letter-spacing: 2px; }
+      .role-text { font-size: 1.6em; }
+      .home-summary { font-size: 1.1em; }
+      .explore-button { font-size: 1.2em; padding: 15px 40px; }
+
+      .project-grid { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+      .section-title { font-size: 3em; }
+      .project-thumbnail { height: 200px; }
+
+      .contact-grid { 
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px; 
+        margin-top: 50px; 
+        margin-bottom: 50px; 
+      }
+    }
+
+    .explanation-box {
+      background: rgba(30, 30, 70, 0.8);
+      border-radius: 15px;
+      padding: 25px;
+      margin: 30px auto;
+      max-width: 800px;
+      border: 1px solid var(--main-color);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    }
+
+    .explanation-box h3 {
+      color: var(--main-color);
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .explanation-box p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .explanation-box ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    .explanation-box li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <div class="logo-placeholder">AB</div>
+      <div class="menu-text">
+        <p class="nav-link active" data-section="home">Início</p>
+        <p class="nav-link" data-section="skills">Habilidades</p>
+        <p class="nav-link" data-section="projects">Projetos</p>
+        <p class="nav-link" data-section="contact">Contato</p>
+      </div>
+    </nav>
+
+    <!-- Home -->
+    <section class="home-section section active-section">
+      <div class="home-content">
+        <h1 class="welcome-title">
+          Olá, eu sou <span class="neon-name">André Borges</span>
+        </h1>
+        <p class="role-text">Engenheiro de Software</p>
+        <p class="role-text-2">Front-end | Cloud | IA | Cybersegurança</p>
+
+        <div class="home-summary">
+          <p class="summary-line">👨‍💻 Desenvolvedor front-end e engenheiro de software.</p>
+          <p class="summary-line">☁️ Experiência com AWS e Azure.</p>
+          <p class="summary-line">⚡ Engenharia de prompts para IA generativa.</p>
+          <p class="summary-line">🔒 Conhecimentos em cibersegurança.</p>
+        </div>
+
+        <p class="location-text">Andradas - MG, Brasil</p>
+
+        <button class="explore-button" data-target-section="skills">
+          Explorar Habilidades
+        </button>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="skills-section section">
+      <div class="content">
+        <div class="info-text">
+          <h1 id="main-title">Habilidades</h1>
+          <p class="info-description">Conheça minhas principais competências e áreas de especialização</p>
+        </div>
+        
+        <div class="skills-container">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="skill-title">Desenvolvimento Web</h3>
+            <p class="skill-description">HTML, CSS, JavaScript, React e Next.js para criar interfaces modernas e responsivas.</p>
+          </div>
+          
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="skill-title">Engenharia de Prompts (IA)</h3>
+            <p class="skill-description">Criação e refinamento de instruções para modelos de IA generativa como ChatGPT e Claude.</p>
+          </div>
+          
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <h3 class="skill-title">Cloud Computing</h3>
+            <p class="skill-description">AWS (EC2, S3, Lambda) e Azure para deploy, escalabilidade e gerenciamento de aplicações.</p>
+          </div>
+          
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <h3 class="skill-title">Gestão de Projetos</h3>
+            <p class="skill-description">Metodologias ágeis, especialmente Scrum, para gerenciar equipes e entregar projetos.</p>
+          </div>
+          
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="skill-title">Cybersegurança</h3>
+            <p class="skill-description">Segurança da informação, análise de vulnerabilidades e proteção de dados.</p>
+          </div>
+          
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3 class="skill-title">Desenvolvimento Mobile</h3>
+            <p class="skill-description">Experiência em desenvolvimento de aplicativos multiplataforma.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section class="projects-section section">
+      <div class="projects-content">
+        <h2 class="section-title">Projetos</h2>
+        <p class="section-subtitle">Alguns trabalhos desenvolvidos</p>
+        <div class="project-grid">
+          <div class="project-card">
+            <div class="project-thumbnail"></div>
+            <h3 class="project-card-title">Jardim de Flores</h3>
+            <p class="project-details">
+              Jardim interativo com flores para mandar a sua amada(o).
+            </p>
+            <div class="project-links">
+              
+              <a href="flowers_garden/dist/index.html" target="_blank" class="project-link">Demo</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-thumbnail"></div>
+            <h3 class="project-card-title">Carrousel de produtos</h3>
+            <p class="project-details">
+              Protótipo de carrousel de produtos com design futurista e responsivo.
+            </p>
+            <div class="project-links">
+             
+              <a href="futuristic_landing_page/index.html" target="_blank" class="project-link">Demo</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-thumbnail"></div>
+            <h3 class="project-card-title">Sistema de Automação de Eventos</h3>
+            <p class="project-details">
+              Sistema para automação de eventos semelhante a Uber.
+            </p>
+            <div class="project-links">
+              
+              <a href="iorole/index.html" target="_blank" class="project-link">Demo</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-thumbnail"></div>
+            <h3 class="project-card-title">Dragão Interativo</h3>
+            <p class="project-details">
+              Dragão interativo para demonstração de habilidades em animações.
+            </p>
+            <div class="project-links">
+            
+              <a href="interactive_dragon/interactive dragon.html" target="_blank" class="project-link">Demo</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contact-section section">
+      <div class="contact-content">
+        <h2 class="section-title">Contato</h2>
+        <div class="contact-grid">
+          <div class="contact-node">
+            <i class="fa-brands fa-github contact-icon"></i>
+            <p class="node-label">GitHub</p>
+            <a href="https://github.com/andredelimamborges" target="_blank" class="node-link">
+              @andredelimamborges
+            </a>
+          </div>
+          <div class="contact-node">
+            <i class="fa-brands fa-linkedin contact-icon"></i>
+            <p class="node-label">LinkedIn</p>
+            <a href="https://www.linkedin.com/in/andré-de-lima-miranda-borges" target="_blank" class="node-link">
+              in/andré-borges
+            </a>
+          </div>
+          <div class="contact-node">
+            <i class="fa-solid fa-envelope contact-icon"></i>
+            <p class="node-label">Email</p>
+            <a href="mailto:andre77llmb@gmail.com" class="node-link">
+              andre77llmb@gmail.com
+            </a>
+          </div>
+          <div class="contact-node">
+            <i class="fa-brands fa-whatsapp contact-icon"></i>
+            <p class="node-label">WhatsApp</p>
+            <a href="https://wa.me/5535999816777" target="_blank" class="node-link">
+              +55 35 99881-6777
+            </a>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <h3>Envie uma mensagem</h3>
+          <form id="contactForm" action="https://formsubmit.co/andre77llmb@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Nova mensagem do portfólio - André Borges">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="#">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <input type="text" name="name" class="form-input" placeholder="Seu nome" required>
+            <input type="email" name="email" class="form-input" placeholder="Seu email" required>
+            <textarea name="message" class="form-textarea" placeholder="Sua mensagem" required></textarea>
+            <button type="submit" class="submit-button">Enviar Mensagem</button>
+            
+            <div id="formStatus" class="form-status"></div>
+          </form>
+        </div>
+
+        <div class="explanation-box">
+          <h3>Como funciona o envio de mensagens?</h3>
+          <p>Este formulário usa o serviço <strong>FormSubmit</strong> para enviar mensagens diretamente para o seu email:</p>
+          <ul>
+            <li>Quando alguém preenche e envia o formulário, os dados são enviados para os servidores do FormSubmit</li>
+            <li>O FormSubmit processa os dados e envia um email para <strong>andre77llmb@gmail.com</strong></li>
+            <li>O email chegará como uma mensagem normal na sua caixa de entrada</li>
+            <li>O remetente será o email que a pessoa preencheu no formulário</li>
+          </ul>
+          <p><strong>Nota:</strong> Às vezes, emails do FormSubmit podem ir para a pasta de spam. Verifique sua caixa de spam se não encontrar a mensagem.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Seletores globais para a navegação e seções
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll(".section");
+    const exploreButton = document.querySelector(".explore-button");
+    const navElement = document.querySelector("nav");
+    const contactForm = document.getElementById("contactForm");
+    const formStatus = document.getElementById("formStatus");
+
+    // --- Funções de Navegação entre Seções ---
+    function updateNavHeight() {
+      const navHeight = navElement.offsetHeight;
+      document.documentElement.style.setProperty("--nav-height", `${navHeight}px`);
+    }
+
+    function showSection(sectionId) {
+      sections.forEach((section) => section.classList.remove("active-section"));
+      const targetSection = document.querySelector(`.${sectionId}-section`);
+      if (targetSection) targetSection.classList.add("active-section");
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.dataset.section === sectionId) {
+          link.classList.add("active");
+        }
+      });
+    }
+
+    // Processamento do formulário de contato
+    contactForm.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      
+      const submitButton = this.querySelector('button[type="submit"]');
+      const originalText = submitButton.textContent;
+      
+      // Mostrar estado de carregamento
+      submitButton.textContent = "Enviando...";
+      submitButton.disabled = true;
+      formStatus.style.display = "none";
+      
+      try {
+        // Coletar dados do formulário
+        const formData = new FormData(this);
+        
+        // Enviar dados para o FormSubmit
+        const response = await fetch(this.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          // Sucesso
+          formStatus.textContent = "Mensagem enviada com sucesso! Entrarei em contato em breve.";
+          formStatus.className = "form-status success";
+          this.reset();
+        } else {
+          throw new Error('Falha no envio');
+        }
+      } catch (error) {
+        // Erro
+        formStatus.textContent = "Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente por email.";
+        formStatus.className = "form-status error";
+      } finally {
+        // Restaurar estado normal do botão
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+      }
+    });
+
+    // --- Event Listeners ---
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        showSection(link.dataset.section);
+      });
+    });
+
+    exploreButton.addEventListener("click", () => {
+      const targetSectionId = exploreButton.dataset.targetSection;
+      if (targetSectionId) showSection(targetSectionId);
+    });
+
+    // Inicialização
+    window.addEventListener("DOMContentLoaded", () => {
+      updateNavHeight();
+      showSection("home");
+    });
+
+    window.addEventListener("resize", updateNavHeight);
+  </script>
+</body>
 </html>
-=======
-</html>
->>>>>>> a14500ad2fd37d08d64c84c5ecc2ff566483b28e
